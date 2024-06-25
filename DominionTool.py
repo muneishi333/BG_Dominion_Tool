@@ -358,65 +358,66 @@ def random_all_set():
     for i in range(13):
         usecard.append(0)
     useset.append(30)   #冒険
+    usespset.append(20)
     totalC += 30
     totalSC += 20
-    usespset.append(20)
     for i in range(30):
         usecard.append(0)
-    for i in range(20):     #イベント
+    for i in range(20): #イベント（冒険）
         usespcard.append(0)
     useset.append(24)   #帝国
-    totalC += 24
-    totalSC += 34
     usespset.append(13)
     usespset.append(21)
+    totalC += 24
+    totalSC += 34
     for i in range(24):
         usecard.append(0)
-    for i in range(13):     #イベント
+    for i in range(13): #イベント（帝国）
         usespcard.append(0)
-    for i in range(21):     #ランドマーク
+    for i in range(21): #ランドマーク
         usespcard.append(0)
     useset.append(33)   #夜想曲
     totalC += 33
     for i in range(33):
         usecard.append(0)
     useset.append(25)  #ルネサンス
+    usespset.append(20)
     totalC += 25
     totalSC += 20
-    usespset.append(20)
     for i in range(25):
         usecard.append(0)
-    for i in range(20):     #プロジェクト
+    for i in range(20): #プロジェクト
         usespcard.append(0)
     useset.append(-30)  #移動動物園
+    usespset.append(-20)
+    usespset.append(-20)
     #totalC += 30
     #totalSC += 40
-    usespset.append(-20)
-    usespset.append(-20)
     for i in range(30):
         usecard.append(-1)
-    for i in range(20):     #イベント
+    for i in range(20): #イベント（移動動物園）
         usespcard.append(-1)
-    for i in range(20):     #習性
+    for i in range(20): #習性
         usespcard.append(-1)
-    useset.append(31) #同盟
+    useset.append(-31)   #同盟
+    usespset.append(-23)
     totalC += 31
     #totalSC += 23
     usespset.append(-23)
     for i in range(31):
-        usecard.append(0)
-    for i in range(23):     #同盟
+        usecard.append(-1)
+    for i in range(23): #同盟
         usespcard.append(-1)
-    useset.append(40)  #略奪
+    useset.append(40)   #略奪
+    usespset.append(15)
+    usespset.append(15)
     totalC += 40
     totalSC += 30
-    usespset.append(15)
-    usespset.append(15)
     for i in range(40):
         usecard.append(0)
-    for i in range(15):     #イベント
+    for i in range(15): #イベント（略奪）
         usespcard.append(0)
-    for i in range(15):     #特性
+    for i in range(15): #特性
         usespcard.append(0)
     totalcard.append(totalC)
     totalcard.append(totalSC)
@@ -548,55 +549,6 @@ def random_card_gene_1():
                 geneCard[(len(random_num)*2)-2]["background"] = "#ffffff"
             #カード名の貼り付け
             geneCard[(len(random_num)*2)-2]["text"] = all_card[numb].name
-            #セットの収納BOXを背景色で視覚化
-            if all_card[numb].set == 0:
-                geneCard[(len(random_num)*2)-1]["text"] = '基本-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffff"
-            elif all_card[numb].set == 1:
-                geneCard[(len(random_num)*2)-1]["text"] = '陰謀-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffffe0"
-            elif all_card[numb].set == 2:
-                geneCard[(len(random_num)*2)-1]["text"] = '海辺-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffff"
-            elif all_card[numb].set == 3:
-                geneCard[(len(random_num)*2)-1]["text"] = '錬金術-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffe0ff"
-            elif all_card[numb].set == 4:
-                geneCard[(len(random_num)*2)-1]["text"] = '繁栄-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffff"
-            elif all_card[numb].set == 5:
-                geneCard[(len(random_num)*2)-1]["text"] = '収穫祭-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffe0ff"
-            elif all_card[numb].set == 6:
-                geneCard[(len(random_num)*2)-1]["text"] = '異郷-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffe0"
-            elif all_card[numb].set == 7:
-                geneCard[(len(random_num)*2)-1]["text"] = '暗黒時代-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffe0"
-            elif all_card[numb].set == 8:
-                geneCard[(len(random_num)*2)-1]["text"] = 'ギルド-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffffe0"
-            elif all_card[numb].set == 9:
-                geneCard[(len(random_num)*2)-1]["text"] = '冒険-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffe0ff"
-            elif all_card[numb].set == 10:
-                geneCard[(len(random_num)*2)-1]["text"] = '帝国-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffff"
-            elif all_card[numb].set == 11:
-                geneCard[(len(random_num)*2)-1]["text"] = '夜想曲-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffffe0"
-            elif all_card[numb].set == 12:
-                geneCard[(len(random_num)*2)-1]["text"] = 'ルネサンス-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffe0ff"
-            elif all_card[numb].set == 13:
-                geneCard[(len(random_num)*2)-1]["text"] = '移動動物園-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#e0ffe0"
-            elif all_card[numb].set == 14:
-                geneCard[(len(random_num)*2)-1]["text"] = '同盟-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffe0ff"
-            elif all_card[numb].set == 15:
-                geneCard[(len(random_num)*2)-1]["text"] = '略奪-' + str(all_card[numb].number) + '　'
-                geneCard[(len(random_num)*2)-1]["background"] = "#ffffe0"
         else:
             showAlert_cardgene()
     else:
