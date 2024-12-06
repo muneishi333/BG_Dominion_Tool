@@ -5,7 +5,7 @@ This code is an application for Dominion's randomizer.
 
 There are 2 menu in this application. 
  - "ランダマイザー"：Computer randomly selects which card to use for the game
- - "アティネイター"：Computer guess the card you're imagining
+ - "闇市場"：Computer randomly selects 3 cards
 
 Default extension set to use (BG_Dominion_Tool.py 320-424)
 (ex) If you want to use "冒険"
